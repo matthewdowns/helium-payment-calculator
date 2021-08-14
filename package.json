@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Web application that can calculate the exact amount of HNT to pay someone that is hosting your hotspot.",
   "keywords": [
-    "helium"
+    "helium",
+    "hnt",
+    "helium-blockchain",
+    "helium-network"
   ],
   "homepage": "https://github.com/matthewdowns/helium-payment-calculator#readme",
   "bugs": {
