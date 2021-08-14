@@ -1,0 +1,37 @@
+@import '~antd/dist/antd.less';
+
+.app {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    
+    > .app-header {
+        flex-shrink: 1 !important;
+    }
+
+    > .app-content {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-grow: 1 !important;
+        align-items: center;
+    }
+
+    > .app-footer {
+        flex-shrink: 1 !important;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 728px !important;
+    margin: 0 auto !important;
+}
+
+.py-50 {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
