@@ -35,11 +35,11 @@ function Calculator() {
     const [hotspotListSearch, setHotspotListSearch] = useState<string>('');
     const [hotspotListSearching, setHotspotListSearching] = useState<boolean>(false);
 
-    let lastMonthAt12AM = moment();
+    const lastMonthAt12AM = moment();
     lastMonthAt12AM.subtract({ month: 1 });
     lastMonthAt12AM.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
 
-    let todayAt1159PM = moment();
+    const todayAt1159PM = moment();
     todayAt1159PM.set({ hour: 23, minute: 59, second: 59, millisecond: 999 });
 
     const [hotspot, setHotspot] = useState<Hotspot>();
@@ -80,7 +80,7 @@ function Calculator() {
                 maxTime: hotspotRewardsEndDate.toDate()
             })
                 .then(list => {
-                    let rewards: Reward[] = [];
+                    const rewards: Reward[] = [];
                     async function keepGrabbing(newList: ResourceList<Reward>) {
                         console.log(newList);
                         rewards.push(...newList.data);
