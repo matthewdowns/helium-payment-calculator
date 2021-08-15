@@ -21,7 +21,7 @@
   "scripts": {
     "start": "webpack serve --open --mode development",
     "lint": "eslint .",
-    "build": "webpack --mode production"
+    "build": "rimraf dist && webpack --mode production"
   },
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
@@ -45,6 +45,7 @@
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "mini-css-extract-plugin": "^2.2.0",
+    "rimraf": "^3.0.2",
     "ts-loader": "^9.2.5",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.3.5",
