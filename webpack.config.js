@@ -1,10 +1,13 @@
+const glob = require('glob');
 const { resolve } = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgeCssWebpackPlugin = require('purgecss-webpack-plugin');
+const TsconfigPathsWebpackPlugin = require('tsconfig-paths-webpack-plugin');
 
-module.exports = {
+module.exports = (_, argv) => ({
+    target: 'web',
     entry: resolve(__dirname, './src/index.tsx'),
     output: {
         filename: '[name].[chunkhash].js',
@@ -54,6 +57,9 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[chunkhash].css'
+        }),
+        new PurgeCssWebpackPlugin({
+            paths: glob.sync(`${resolve(__dirname, './src')}/**/*`, { nodir: true })
         })
     ],
     resolve: {
@@ -62,8 +68,16 @@ module.exports = {
         plugins: [new TsconfigPathsWebpackPlugin()]
     },
     optimization: {
+        minimize: true,
         splitChunks: {
-            chunks: 'all'
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
         }
     }
-}
+});
