@@ -24,7 +24,7 @@
     "build": "rimraf dist && webpack --mode production"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
+    "@ant-design/icons": "^4.6.3",
     "@helium/http": "^3.40.0",
     "antd": "^4.16.11",
     "moment": "^2.29.1",
