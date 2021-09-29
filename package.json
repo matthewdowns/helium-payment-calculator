@@ -27,7 +27,7 @@
     "build": "rimraf dist && webpack --mode production"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
+    "@ant-design/icons": "^4.7.0",
     "@helium/http": "^3.43.0",
     "antd": "^4.16.12",
     "moment": "^2.29.1",
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.30.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
