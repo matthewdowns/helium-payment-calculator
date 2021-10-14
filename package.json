@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^6.3.0",
+    "css-loader": "^6.4.0",
     "eslint": "^7.32.0",
     "file-loader": "^6.2.0",
     "glob": "^7.2.0",
