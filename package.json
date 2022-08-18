@@ -29,7 +29,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@helium/http": "^4.2.0",
-    "antd": "^4.20.2",
+    "antd": "^4.22.6",
     "moment": "^2.29.3",
     "rc-footer": "^0.6.6",
     "react": "^18.1.0",
